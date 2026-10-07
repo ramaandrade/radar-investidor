@@ -36,7 +36,6 @@ const requiredTokens = [
   'Fundamentus',
   'Yubb / App Renda Fixa',
   'Calculadora do Cidadão (Banco Central)',
-  'Estou Pronto: Iniciar Avaliação',
   'https://statusinvest.com.br/',
   'https://www.fundamentus.com.br/',
   'https://yubb.com.br/',
@@ -50,6 +49,23 @@ requiredTokens.forEach(token => {
     console.log(`[PASS] Encontrado: "${token}"`);
   } else {
     console.error(`[FAIL] Ausente no HTML: "${token}"`);
+    missingCount++;
+  }
+});
+
+const deletedTokens = [
+  'engagement-summary-card',
+  'NÍVEL DE ABSORÇÃO DO PASSO 6',
+  'btn-start-evaluation',
+  'Estou Pronto: Iniciar Avaliação',
+  'sticky-cta-dock'
+];
+
+deletedTokens.forEach(token => {
+  if (!html.includes(token)) {
+    console.log(`[PASS] Elemento removido com sucesso: "${token}"`);
+  } else {
+    console.error(`[FAIL] Elemento ainda presente no HTML: "${token}"`);
     missingCount++;
   }
 });

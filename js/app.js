@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initToolbarControls();
   initInteractiveHacks();
   initToolkitLinks();
-  initStickyCTA();
   initModals();
   initServiceWorker();
   updateEngagementUI();
@@ -192,95 +191,11 @@ function updateEngagementUI(detail) {
   const tracker = window.InvestidorTracker;
   if (!tracker) return;
 
-  const pct = detail ? detail.percentage : tracker.getEngagementPercentage();
   const readCards = detail ? detail.readCards : tracker.getReadCardsCount();
   const totalCards = detail ? detail.totalCards : tracker.getTotalCardsCount();
-  const isReady = detail ? detail.isReady : tracker.isReadyForEvaluation();
-
-  // Barra de progresso no card de engajamento
-  const fillBar = document.getElementById('engagement-progress-bar');
-  if (fillBar) fillBar.style.width = `${pct}%`;
-
-  const percentLabel = document.getElementById('lbl-engagement-percentage');
-  if (percentLabel) percentLabel.textContent = `${pct}%`;
 
   const countTag = document.getElementById('toolbar-cards-read-count');
   if (countTag) countTag.textContent = `${readCards}/${totalCards} lidos`;
-
-  // Checklist de Cards
-  const checks = {
-    cardA: document.getElementById('check-card-a'),
-    cardB: document.getElementById('check-card-b'),
-    cardC: document.getElementById('check-card-c'),
-    cardD: document.getElementById('check-card-d')
-  };
-
-  Object.entries(tracker.cardsState).forEach(([key, state]) => {
-    if (checks[key]) {
-      if (state.read) {
-        checks[key].classList.add('done');
-        checks[key].innerHTML = '<span>✓</span> ' + checks[key].dataset.label;
-      }
-    }
-  });
-
-  // Atualizar Sticky CTA Footer
-  const ctaBtn = document.getElementById('btn-start-evaluation');
-  const ctaHint = document.getElementById('cta-status-label');
-
-  if (ctaBtn && ctaHint) {
-    if (isReady) {
-      ctaBtn.classList.add('pulse');
-      ctaHint.innerHTML = `<span>🎯 <strong>Status:</strong> 100% preparado para a Prova do Tema 4!</span>`;
-    } else {
-      ctaBtn.classList.remove('pulse');
-      ctaHint.innerHTML = `<span>📖 <strong>Progresso:</strong> ${readCards} de ${totalCards} cards explorados (${pct}%)</span>`;
-    }
-  }
-}
-
-/* ==========================================================================
-   6. FOOTER STICKY CTA ("ESTOU PRONTO: INICIAR AVALIAÇÃO")
-   ========================================================================== */
-function initStickyCTA() {
-  const ctaBtn = document.getElementById('btn-start-evaluation');
-  if (!ctaBtn) return;
-
-  ctaBtn.addEventListener('click', () => {
-    const tracker = window.InvestidorTracker;
-    const isReady = tracker ? tracker.isReadyForEvaluation() : true;
-
-    if (isReady) {
-      openModal('modal-evaluation-ready');
-    } else {
-      // Abre modal de confirmação pedagógica mostrando o que falta
-      populateMissingRequirementsModal();
-      openModal('modal-evaluation-confirm');
-    }
-  });
-}
-
-function populateMissingRequirementsModal() {
-  const tracker = window.InvestidorTracker;
-  if (!tracker) return;
-
-  const listEl = document.getElementById('list-missing-requirements');
-  const missing = tracker.getMissingRequirements();
-
-  if (listEl) {
-    listEl.innerHTML = '';
-    missing.forEach(item => {
-      const li = document.createElement('li');
-      li.style.padding = '4px 0';
-      li.innerHTML = `⚠️ <strong style="color: #d97706;">Pendente:</strong> ${item}`;
-      listEl.appendChild(li);
-    });
-  }
-
-  const scoreEl = document.getElementById('lbl-confirm-current-score');
-  if (scoreEl) {
-    scoreEl.textContent = `${tracker.getEngagementPercentage()}%`;
-  }
 }
 
 /* ==========================================================================
@@ -310,23 +225,6 @@ function initModals() {
     });
   }
 
-  // Ações nos modais
-  const btnProceedAnyway = document.getElementById('btn-proceed-to-exam-anyway');
-  if (btnProceedAnyway) {
-    btnProceedAnyway.addEventListener('click', () => {
-      closeModal('modal-evaluation-confirm');
-      openModal('modal-evaluation-ready');
-    });
-  }
-
-  const btnReviewPending = document.getElementById('btn-review-pending');
-  if (btnReviewPending) {
-    btnReviewPending.addEventListener('click', () => {
-      closeModal('modal-evaluation-confirm');
-      // Rola suavemente até o primeiro card não lido
-      scrollToFirstUnreadCard();
-    });
-  }
 
   const btnCopyTelemetry = document.getElementById('btn-copy-telemetry-json');
   if (btnCopyTelemetry) {

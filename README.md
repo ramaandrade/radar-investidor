@@ -28,7 +28,6 @@ O app é projetado para navegação ergonômica com o polegar (360px+), eliminan
   4. *Visão Empresarial*
   5. *Aprenda Jogando*
   6. **Dicas da Internet (Ativo)**
-* **Sticky CTA (Footer Fixo):** Botão persistente *"Estou Pronto: Iniciar Avaliação"* na parte inferior da tela, com indicador dinâmico de status de absorção do conteúdo e alerta preventivo caso o aluno tente iniciar a avaliação sem ler todos os tópicos.
 
 ---
 

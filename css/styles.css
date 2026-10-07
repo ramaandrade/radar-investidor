@@ -70,7 +70,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-bottom: 96px; /* Espaço para o Sticky Footer CTA */
+  padding-bottom: 32px;
   background: linear-gradient(180deg, #f0fdf4 0%, #f8fafc 180px, #f8fafc 100%);
 }
 
