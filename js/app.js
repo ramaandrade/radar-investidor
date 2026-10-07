@@ -309,14 +309,19 @@ function populateTeacherTelemetryModal() {
 }
 
 /* ==========================================================================
-   8. SERVICE WORKER PARA CARREGAMENTO ASSÍNCRONO ULTRA-RÁPIDO (<2s EM 3G/4G)
+   8. LIMPEZA DE CACHE E DESINSTALAÇÃO DE SERVICE WORKER
    ========================================================================== */
 function initServiceWorker() {
-  if ('serviceWorker' in navigator && window.location.protocol.startsWith('http')) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('./sw.js').catch(err => {
-        console.log('SW registration note:', err.message);
-      });
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      for (const reg of registrations) {
+        reg.unregister();
+      }
+    });
+  }
+  if ('caches' in window) {
+    caches.keys().then((names) => {
+      names.forEach((name) => caches.delete(name));
     });
   }
 }

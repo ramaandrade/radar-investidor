@@ -13,7 +13,21 @@
   <meta name="apple-mobile-web-app-title" content="Radar Investidor">
   
   <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=2">
+  
+  <!-- Desregistra qualquer Service Worker e limpa CacheStorage automaticamente -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        registrations.forEach(function(r) { r.unregister(); });
+      });
+    }
+    if ('caches' in window) {
+      caches.keys().then(function(names) {
+        names.forEach(function(n) { caches.delete(n); });
+      });
+    }
+  </script>
 </head>
 <body>
 
@@ -563,7 +577,7 @@
   <!-- ==========================================================================
        SCRIPTS ASSÍNCRONOS / DEFER (CARREGAMENTO < 2 SEGUNDOS EM 3G/4G)
        ========================================================================== -->
-  <script src="js/tracker.js" defer></script>
-  <script src="js/app.js" defer></script>
+  <script src="js/tracker.js?v=2" defer></script>
+  <script src="js/app.js?v=2" defer></script>
 </body>
 </html>

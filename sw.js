@@ -1,57 +1,25 @@
-const CACHE_NAME = 'radar-investidor-v1';
-const ASSETS_TO_CACHE = [
-  './',
-  './index.html',
-  './css/styles.css',
-  './js/tracker.js',
-  './js/app.js',
-  './manifest.json'
-];
-
+// Service Worker de Atualização e Limpeza Total de Cache
 self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(ASSETS_TO_CACHE);
-    }).then(() => self.skipWaiting())
-  );
+  self.skipWaiting();
 });
 
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((keys) => {
-      return Promise.all(
-        keys.map((key) => {
-          if (key !== CACHE_NAME) {
-            return caches.delete(key);
-          }
-        })
-      );
-    }).then(() => self.clients.claim())
+      return Promise.all(keys.map((key) => caches.delete(key)));
+    }).then(() => {
+      return self.registration.unregister();
+    }).then(() => {
+      return self.clients.claim();
+    }).then(() => {
+      return self.clients.matchAll({ type: 'window' }).then((clients) => {
+        clients.forEach((client) => client.navigate(client.url));
+      });
+    })
   );
 });
 
 self.addEventListener('fetch', (event) => {
-  // Apenas solicitações GET
-  if (event.request.method !== 'GET') return;
-
-  event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) {
-        return cachedResponse;
-      }
-      return fetch(event.request).then((networkResponse) => {
-        // Cacheia novas páginas estáticas
-        if (networkResponse && networkResponse.status === 200 && networkResponse.type === 'basic') {
-          const responseToCache = networkResponse.clone();
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, responseToCache);
-          });
-        }
-        return networkResponse;
-      }).catch(() => {
-        // Fallback offline se necessário
-        return caches.match('./index.html');
-      });
-    })
-  );
+  // Sempre busca direto da rede sem cache
+  event.respondWith(fetch(event.request, { cache: 'no-cache' }));
 });
