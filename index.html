@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Passo 6: Dicas da Internet — O Radar do Investidor (TEMA 4)</title>
+  
+  <meta name="description" content="Aulão de Revisão e Hacks de Renda Fixa e Renda Variável. Passo 6 da Sequência da Aula - TEMA 4. Ferramentas, mindset e estratégias do mercado financeiro.">
+  <meta name="theme-color" content="#059669">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Radar Investidor">
+  
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Barra de Progresso de Rolagem (Scroll Depth Visual) -->
+  <div id="scroll-progress-bar" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       HEADER & STEPPER: SEQUÊNCIA DA AULA - TEMA 4
+       ========================================================================== -->
+  <header class="app-header">
+    <div class="container">
+      
+      <div class="header-top">
+        <div class="theme-badge">
+          <span class="pulse-dot"></span>
+          <span>TEMA 4: Renda Fixa e Renda Variável</span>
+        </div>
+        
+        <div class="header-actions">
+          <button id="btn-open-teacher-data" class="btn-icon-soft" title="Telemetria Docente / Dados do Professor" aria-label="Abrir Telemetria do Professor">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 20V10"></path>
+              <path d="M12 20V4"></path>
+              <path d="M6 20v-6"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Barra de Sequência da Aula: Passos 1 a 6 -->
+      <nav class="lesson-stepper" aria-label="Passos da Sequência da Aula">
+        <div class="step-item completed" title="Passo 1: Texto da Prova">
+          <span class="step-dot">1</span>
+          <span>Texto da Prova</span>
+        </div>
+        <div class="step-item completed" title="Passo 2: Vídeos">
+          <span class="step-dot">2</span>
+          <span>Vídeos</span>
+        </div>
+        <div class="step-item completed" title="Passo 3: Slides">
+          <span class="step-dot">3</span>
+          <span>Slides</span>
+        </div>
+        <div class="step-item completed" title="Passo 4: Visão Empresarial">
+          <span class="step-dot">4</span>
+          <span>Visão Empresarial</span>
+        </div>
+        <div class="step-item completed" title="Passo 5: Aprenda Jogando">
+          <span class="step-dot">5</span>
+          <span>Aprenda Jogando</span>
+        </div>
+        <div class="step-item active" title="Passo 6: Dicas da Internet (Ativo)">
+          <span class="step-dot">6</span>
+          <span>Dicas da Internet</span>
+        </div>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       CONTEÚDO PRINCIPAL (SINGLE-PAGE MOBILE SCROLLER)
+       ========================================================================== -->
+  <main class="container">
+
+    <!-- HERO DO PASSO 6 -->
+    <section class="hero-section" aria-labelledby="hero-title-h1">
+      <div class="hero-header-row">
+        
+        <!-- Ícone Verde com o Número 6 (Consistência Visual Obrigatória) -->
+        <div class="green-number-six-badge" aria-hidden="true">
+          <span class="six-digit">6</span>
+          <span class="six-label">Passo</span>
+        </div>
+
+        <div class="hero-titles">
+          <div class="hero-subtitle">Módulo de Fechamento & Revisão</div>
+          <h1 id="hero-title-h1" class="hero-title">Dicas da Internet: O Radar do Investidor</h1>
+        </div>
+      </div>
+
+      <p class="hero-desc">
+        Bem-vindo ao <strong>Aulão de Revisão e Hacks</strong>. Aqui consolidamos as ferramentas práticas, armadilhas psicológicas e macetes cruciais para você operar no mercado real e gabaritar a avaliação.
+      </p>
+
+      <!-- Caixa de Mentoria do Professor -->
+      <div class="mentor-pitch-box">
+        <div class="mentor-avatar" aria-hidden="true">👨‍🏫</div>
+        <div class="mentor-content">
+          <strong>Voz do Professor:</strong>
+          "Não basta decorar teoria. Um investidor inteligente sabe onde consultar dados reais em 30 segundos e não cai em conto do vigário na internet."
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLBAR DOS CARDS (EXPANDIR/RECOLHER & STATUS) -->
+    <div class="accordion-toolbar">
+      <div class="cards-counter-status">
+        <span>Cards do Aulão:</span>
+        <span class="counter-tag" id="toolbar-cards-read-count">0/4 lidos</span>
+      </div>
+      <button id="btn-toggle-all-cards" class="toolbar-toggle-btn" type="button">
+        <span>Expandir Todos</span>
+      </button>
+    </div>
+
+    <!-- FLUXO DE CARDS EXPANSÍVEIS (ACORDEÕES) -->
+    <div class="cards-stream" id="accordion-container">
+
+      <!-- ====================================================================
+           CARD A: O MINDSET DO INVESTIDOR (COMPORTAMENTO)
+           ==================================================================== -->
+      <article class="accordion-card open" data-card-id="cardA" id="section-card-a">
+        <button class="accordion-header" type="button" aria-expanded="true" aria-controls="content-card-a">
+          <div class="header-left-group">
+            <div class="card-icon-pill" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+              </svg>
+            </div>
+            <div class="card-titles">
+              <span class="card-category-tag">Card A • Comportamento</span>
+              <h2 class="card-title">O Mindset do Investidor</h2>
+            </div>
+          </div>
+          <div class="header-right-meta">
+            <span class="read-check-badge" title="Status de Leitura">✓</span>
+            <div class="chevron-arrow" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+        </button>
+
+        <div class="accordion-body" id="content-card-a">
+          <div class="card-inner-content">
+
+            <!-- Tópico 1 -->
+            <div class="topic-block">
+              <div class="topic-header">
+                <span class="topic-tag tag-warning">Cuidado</span>
+                <h3 class="topic-title">Fuja do "Fintwit" e de Dicas Quentes</h3>
+              </div>
+              <p class="topic-text">
+                A internet está cheia de gurus prometendo lucros rápidos. Em finanças, se a dica chegou até você no Twitter/X ou TikTok, o mercado já a precificou. Aja com base em fundamentos, não em <em>hype</em>.
+              </p>
+            </div>
+
+            <!-- Tópico 2 -->
+            <div class="topic-block">
+              <div class="topic-header">
+                <span class="topic-tag tag-success">Paciência</span>
+                <h3 class="topic-title">O Tempo é o Maior Ativo</h3>
+              </div>
+              <p class="topic-text">
+                Na Renda Variável, a volatilidade machuca no curto prazo, mas a curva de juros compostos recompensa a paciência (horizonte de 5 a 10+ anos).
+              </p>
+              <div class="topic-formula-badge">
+                💡 <strong>Regra de Ouro:</strong> No curto prazo, a bolsa é uma máquina de votar (humor coletivo). No longo prazo, ela é uma balança que pesa os lucros reais das empresas.
+              </div>
+            </div>
+
+            <!-- Tópico 3 -->
+            <div class="topic-block">
+              <div class="topic-header">
+                <span class="topic-tag tag-info">Base Sólida</span>
+                <h3 class="topic-title">Reserva de Emergência Primeiro</h3>
+              </div>
+              <p class="topic-text">
+                Nunca coloque dinheiro na Renda Variável que você possa precisar nos próximos 2 anos. Use a Renda Fixa com liquidez diária (CDB 100% CDI ou Tesouro Selic) para isso.
+              </p>
+              
+              <!-- Mini-ferramenta interativa de Reserva de Emergência -->
+              <div class="interactive-micro-tool">
+                <div class="micro-tool-header">
+                  <span>Simulador Rápido: Reserva de Emergência</span>
+                  <span>6 Meses de Custo</span>
+                </div>
+                <div class="slider-wrapper">
+                  <div class="slider-row">
+                    <label for="input-custo-mensal" style="color: var(--text-muted); font-size: 0.78rem;">Seu Custo de Vida Mensal (R$):</label>
+                  </div>
+                  <input type="number" id="input-custo-mensal" value="2500" min="500" step="100" style="width: 100%; padding: 8px 10px; border: 1.5px solid var(--border-color); border-radius: 8px; font-weight: 700;">
+                  <div class="sim-result-box">
+                    Sua Reserva Recomendada em CDB/Tesouro Selic: <br>
+                    <strong id="lbl-reserva-calculada" style="font-size: 1.1rem; color: #047857;">R$ 15.000,00</strong>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </article>
+
+      <!-- ====================================================================
+           CARD B: HACKS DE RENDA FIXA (SEGURANÇA COM ESTRATÉGIA)
+           ==================================================================== -->
+      <article class="accordion-card" data-card-id="cardB" id="section-card-b">
+        <button class="accordion-header" type="button" aria-expanded="false" aria-controls="content-card-b">
+          <div class="header-left-group">
+            <div class="card-icon-pill" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <div class="card-titles">
+              <span class="card-category-tag">Card B • Renda Fixa</span>
+              <h2 class="card-title">Hacks de Renda Fixa</h2>
+            </div>
+          </div>
+          <div class="header-right-meta">
+            <span class="read-check-badge" title="Status de Leitura">○</span>
+            <div class="chevron-arrow" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+        </button>
+
+        <div class="accordion-body" id="content-card-b">
+          <div class="card-inner-content">
+
+            <!-- Tópico 1 -->
+            <div class="topic-block">
+              <div class="topic-header">
+                <span class="topic-tag tag-warning">Estratégico</span>
+                <h3 class="topic-title">A Magia da Marcação a Mercado</h3>
+              </div>
+              <p class="topic-text">
+                Renda Fixa <em>não é fixa</em> se você vender antes do vencimento. Títulos como Tesouro IPCA+ e Prefixados oscilam de preço diariamente. Se a taxa de juros (Selic) cai, o valor do seu título sobe. Você pode ter lucros de Renda Variável na Renda Fixa se souber vender na hora certa.
+              </p>
+
+              <!-- Mini Simulador Interativo de Marcação a Mercado -->
+              <div class="interactive-micro-tool">
+                <div class="micro-tool-header">
+                  <span>Simulador: Choque na Selic vs Preço do Título</span>
+                  <span id="lbl-taxa-simulada" style="color: #059669; font-weight: 800;">12.0% a.a.</span>
+                </div>
+                <div class="slider-wrapper">
+                  <div class="slider-row">
+                    <span style="font-size: 0.72rem; color: var(--text-light);">Taxa Cai (9%)</span>
+                    <span style="font-size: 0.72rem; color: var(--text-light);">Taxa Sobe (16%)</span>
+                  </div>
+                  <input type="range" id="slider-taxa-selic" min="8.0" max="16.0" step="0.5" value="12.0" class="custom-range" aria-label="Simular nova taxa de juros do mercado">
+                  <div class="sim-result-box">
+                    Preço Unitário (P.U.) Estimado: <strong id="lbl-pu-resultado">R$ 1.000,00</strong>
+                    <div id="lbl-efeito-pu" style="margin-top: 4px; font-size: 0.76rem;">⚖️ No par: Taxa igual à contratada.</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Tópico 2 -->
+            <div class="topic-block">
+              <div class="topic-header">
+                <span class="topic-tag tag-success">Garantia</span>
+                <h3 class="topic-title">Proteção do FGC (Fundo Garantidor de Créditos)</h3>
+              </div>
+              <p class="topic-text">
+                Ao investir em CDBs, LCIs e LCAs de bancos menores (que pagam taxas melhores), você está protegido em até R$ 250 mil por CPF/instituição. Use isso para buscar rentabilidade além dos grandes bancos, mas sempre pulverizando o risco.
+              </p>
+
+              <!-- Verificador de Teto do FGC -->
+              <div class="interactive-micro-tool">
+                <div class="micro-tool-header">
+                  <span>Check de Segurança: Teto do FGC</span>
+                  <span>R$ 250.000 / banco</span>
+                </div>
+                <div class="slider-wrapper">
+                  <input type="number" id="input-fgc-valor" value="180000" step="10000" style="width: 100%; padding: 8px 10px; border: 1.5px solid var(--border-color); border-radius: 8px; font-weight: 700;">
+                  <div class="sim-result-box" id="lbl-fgc-status">
+                    <span style="color: #059669; font-weight: 800;">🛡️ 100% Protegido pelo FGC!</span> Abaixo do teto de R$ 250.000 por CPF/instituição.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Tópico 3 -->
+            <div class="topic-block">
+              <div class="topic-header">
+                <span class="topic-tag tag-info">Poder de Compra</span>
+                <h3 class="topic-title">Cuidado com a Inflação (IPCA)</h3>
+              </div>
+              <p class="topic-text">
+                Para o longo prazo, prefira sempre títulos atrelados à inflação (IPCA + uma taxa fixa) para garantir ganho real, ou seja, aumento do seu poder de compra.
+              </p>
+              <div class="topic-formula-badge">
+                📈 <strong>Equação de Fisher:</strong> Se um investimento rende 10% e a inflação for de 7%, seu ganho real NÃO é de 10%, mas de aproximadamente 2,8%. Fuja da ilusão monetária!
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </article>
+
+      <!-- ====================================================================
+           CARD C: VISÃO PRÁTICA EM RENDA VARIÁVEL (CRESCIMENTO E DIVIDENDOS)
+           ==================================================================== -->
+      <article class="accordion-card" data-card-id="cardC" id="section-card-c">
+        <button class="accordion-header" type="button" aria-expanded="false" aria-controls="content-card-c">
+          <div class="header-left-group">
+            <div class="card-icon-pill" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                <polyline points="17 6 23 6 23 12"></polyline>
+              </svg>
+            </div>
+            <div class="card-titles">
+              <span class="card-category-tag">Card C • Renda Variável</span>
+              <h2 class="card-title">Visão Prática em Renda Variável</h2>
+            </div>
+          </div>
+          <div class="header-right-meta">
+            <span class="read-check-badge" title="Status de Leitura">○</span>
+            <div class="chevron-arrow" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+        </button>
+
+        <div class="accordion-body" id="content-card-c">
+          <div class="card-inner-content">
+
+            <!-- Tópico 1 -->
+            <div class="topic-block">
+              <div class="topic-header">
+                <span class="topic-tag tag-purple">Porta de Entrada</span>
+                <h3 class="topic-title">ETFs (Exchange Traded Funds)</h3>
+              </div>
+              <p class="topic-text">
+                A melhor porta de entrada. Em vez de tentar adivinhar qual empresa vai subir, compre um "pacote" do mercado inteiro. Exemplo: <em>WRLD11</em> (investe no mundo todo) ou <em>IVVB11</em> (investe nas 500 maiores empresas dos EUA). Você diversifica instantaneamente com pouco dinheiro.
+              </p>
+            </div>
+
+            <!-- Tópico 2 -->
+            <div class="topic-block">
+              <div class="topic-header">
+                <span class="topic-tag tag-success">Fluxo Mensal</span>
+                <h3 class="topic-title">FIIs (Fundos Imobiliários) para Renda Passiva</h3>
+              </div>
+              <p class="topic-text">
+                Quer ver dinheiro caindo na conta todo mês? FIIs pagam dividendos mensais isentos de imposto de renda. É como receber aluguel sem a dor de cabeça de ter o imóvel físico.
+              </p>
+              <div class="topic-formula-badge">
+                🏢 <strong>Vantagem Operacional:</strong> Sem inquilino inadimplente ligando de madrugada, liquidez diária em bolsa e isenção de IR sobre os proventos para pessoa física.
+              </div>
+            </div>
+
+            <!-- Tópico 3 -->
+            <div class="topic-block">
+              <div class="topic-header">
+                <span class="topic-tag tag-warning">Anti-Fragilidade</span>
+                <h3 class="topic-title">Ações e a Regra da Diversificação</h3>
+              </div>
+              <p class="topic-text">
+                Nunca concentre seu patrimônio em um único setor (ex: só bancos ou só varejo). O segredo para não perder tudo em uma crise setorial é a descorrelação de ativos.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </article>
+
+      <!-- ====================================================================
+           CARD D: TOOLKIT DA INTERNET (ONDE PESQUISAR?)
+           ==================================================================== -->
+      <article class="accordion-card" data-card-id="cardD" id="section-card-d">
+        <button class="accordion-header" type="button" aria-expanded="false" aria-controls="content-card-d">
+          <div class="header-left-group">
+            <div class="card-icon-pill" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+              </svg>
+            </div>
+            <div class="card-titles">
+              <span class="card-category-tag">Card D • Ferramentas Reais</span>
+              <h2 class="card-title">Toolkit da Internet (Onde Pesquisar?)</h2>
+            </div>
+          </div>
+          <div class="header-right-meta">
+            <span class="read-check-badge" title="Status de Leitura">○</span>
+            <div class="chevron-arrow" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+        </button>
+
+        <div class="accordion-body" id="content-card-d">
+          <div class="card-inner-content">
+            <p class="topic-text" style="margin-bottom: 2px;">
+              Toque nos botões abaixo para abrir cada ferramenta oficial em uma nova aba e turbinar suas análises:
+            </p>
+
+            <div class="toolkit-grid">
+
+              <!-- Ferramenta 1: Status Invest -->
+              <a href="https://statusinvest.com.br/" target="_blank" rel="noopener noreferrer" class="toolkit-touch-btn" data-tool-name="Status Invest" aria-label="Abrir Status Invest em nova aba">
+                <div class="toolkit-icon-col">
+                  <div class="toolkit-icon-box">📊</div>
+                </div>
+                <div class="toolkit-info-col">
+                  <div class="toolkit-title-row">
+                    <span class="toolkit-name">Status Invest</span>
+                    <span class="toolkit-tag">Gratuito • Completo</span>
+                  </div>
+                  <p class="toolkit-desc">
+                    O melhor site gratuito no Brasil para analisar fundamentos de Ações, FIIs e criar alertas de dividendos.
+                  </p>
+                </div>
+                <div class="toolkit-arrow-col" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </div>
+              </a>
+
+              <!-- Ferramenta 2: Fundamentus -->
+              <a href="https://www.fundamentus.com.br/" target="_blank" rel="noopener noreferrer" class="toolkit-touch-btn" data-tool-name="Fundamentus" aria-label="Abrir Fundamentus em nova aba">
+                <div class="toolkit-icon-col">
+                  <div class="toolkit-icon-box">📑</div>
+                </div>
+                <div class="toolkit-info-col">
+                  <div class="toolkit-title-row">
+                    <span class="toolkit-name">Fundamentus</span>
+                    <span class="toolkit-tag">Múltiplos da Bolsa</span>
+                  </div>
+                  <p class="toolkit-desc">
+                    Para quem gosta de planilhas e análises gráficas clássicas com os múltiplos de todas as empresas da Bolsa (P/L, ROE, Dividend Yield).
+                  </p>
+                </div>
+                <div class="toolkit-arrow-col" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </div>
+              </a>
+
+              <!-- Ferramenta 3: Yubb / App Renda Fixa -->
+              <a href="https://yubb.com.br/" target="_blank" rel="noopener noreferrer" class="toolkit-touch-btn" data-tool-name="Yubb & App Renda Fixa" aria-label="Abrir Buscador Yubb e App Renda Fixa em nova aba">
+                <div class="toolkit-icon-col">
+                  <div class="toolkit-icon-box">🔍</div>
+                </div>
+                <div class="toolkit-info-col">
+                  <div class="toolkit-title-row">
+                    <span class="toolkit-name">Yubb / App Renda Fixa</span>
+                    <span class="toolkit-tag">Comparador de Taxas</span>
+                  </div>
+                  <p class="toolkit-desc">
+                    Buscadores que funcionam como um "Trivago dos investimentos". Mostram quais bancos ou corretoras estão pagando as melhores taxas de CDB e LCI no momento.
+                  </p>
+                </div>
+                <div class="toolkit-arrow-col" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </div>
+              </a>
+
+              <!-- Ferramenta 4: Calculadora do Cidadão (BACEN) -->
+              <a href="https://www3.bcb.gov.br/CALCIDADAO/publico/exibirFormAplicacaoDepositosRegulares.do?method=exibirFormAplicacaoDepositosRegulares" target="_blank" rel="noopener noreferrer" class="toolkit-touch-btn" data-tool-name="Calculadora do Cidadão BCB" aria-label="Abrir Calculadora do Cidadão do Banco Central em nova aba">
+                <div class="toolkit-icon-col">
+                  <div class="toolkit-icon-box">🏛️</div>
+                </div>
+                <div class="toolkit-info-col">
+                  <div class="toolkit-title-row">
+                    <span class="toolkit-name">Calculadora do Cidadão (Banco Central)</span>
+                    <span class="toolkit-tag">Oficial BACEN</span>
+                  </div>
+                  <p class="toolkit-desc">
+                    Ferramenta essencial para simular aplicações com depósitos regulares e entender o impacto real dos juros compostos.
+                  </p>
+                </div>
+                <div class="toolkit-arrow-col" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </div>
+              </a>
+
+            </div>
+
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ====================================================================
+         CARD DE ENGAJAMENTO & CHECKLIST DO ALUNO
+         ==================================================================== -->
+    <section class="engagement-summary-card" aria-label="Seu Progresso de Estudo">
+      <div class="engagement-title-row">
+        <div class="engagement-title">
+          <span>🎯 Nível de Absorção do Passo 6</span>
+        </div>
+        <span class="engagement-percent" id="lbl-engagement-percentage">0%</span>
+      </div>
+
+      <div class="progress-track" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar-fill" id="engagement-progress-bar"></div>
+      </div>
+
+      <div class="engagement-checklist">
+        <div class="check-item done" id="check-card-a" data-label="Mindset"><span>✓</span> Mindset</div>
+        <div class="check-item" id="check-card-b" data-label="Renda Fixa"><span>○</span> Renda Fixa</div>
+        <div class="check-item" id="check-card-c" data-label="Renda Var."><span>○</span> Renda Var.</div>
+        <div class="check-item" id="check-card-d" data-label="Toolkit"><span>○</span> Toolkit</div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER DE AÇÃO FIXO (STICKY CTA OBRIGATÓRIO)
+       ========================================================================== -->
+  <footer class="sticky-cta-dock" role="contentinfo">
+    <div class="cta-container">
+      <div class="cta-status-hint" id="cta-status-label">
+        <span>📖 <strong>Progresso:</strong> 1 de 4 cards explorados (25%)</span>
+      </div>
+      <button id="btn-start-evaluation" class="btn-primary-cta" type="button" aria-label="Iniciar Avaliação do Tema 4">
+        <span>Estou Pronto: Iniciar Avaliação</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL: CONFIRMAÇÃO PEDAGÓGICA (SE O ALUNO NÃO LEU TODOS OS CARDS)
+       ========================================================================== -->
+  <div class="modal-overlay" id="modal-evaluation-confirm" role="dialog" aria-modal="true" aria-labelledby="confirm-modal-title">
+    <div class="modal-sheet">
+      <div class="modal-drag-pill"></div>
+      <div class="modal-header">
+        <h3 id="confirm-modal-title" class="modal-title">Quase lá, Investidor!</h3>
+        <button class="btn-close-modal" type="button" aria-label="Fechar">&times;</button>
+      </div>
+      
+      <div class="modal-content-area">
+        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.45;">
+          Você absorveu <strong id="lbl-confirm-current-score" style="color: var(--green-dark);">0%</strong> das dicas deste aulão. O professor recomenda ler todos os 4 cards e ferramentas antes de encarar as questões da prova.
+        </p>
+
+        <div style="background: #fffbeb; border: 1px solid #fde68a; border-radius: 12px; padding: 12px;">
+          <h4 style="font-size: 0.82rem; font-weight: 800; color: #b45309; text-transform: uppercase; margin-bottom: 6px;">Cards / Tópicos Recomendados:</h4>
+          <ul id="list-missing-requirements" style="font-size: 0.8rem; list-style: none; padding: 0;">
+            <!-- Itens preenchidos via tracker.js -->
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 6px;">
+          <button id="btn-review-pending" type="button" class="btn-primary-cta" style="min-height: 48px; font-size: 0.95rem;">
+            <span>Revisar Conteúdo Pendente</span>
+          </button>
+          <button id="btn-proceed-to-exam-anyway" type="button" style="background: transparent; border: 1.5px solid var(--border-color); color: var(--text-muted); padding: 12px; border-radius: 12px; font-weight: 700; font-size: 0.85rem; cursor: pointer;">
+            Entendi os riscos, iniciar prova mesmo assim
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL: PROVA DESBLOQUEADA & RELATÓRIO DO TEMA 4
+       ========================================================================== -->
+  <div class="modal-overlay" id="modal-evaluation-ready" role="dialog" aria-modal="true" aria-labelledby="ready-modal-title">
+    <div class="modal-sheet">
+      <div class="modal-drag-pill"></div>
+      <div class="modal-header">
+        <h3 id="ready-modal-title" class="modal-title">🎉 Parabéns! Avaliação Liberada</h3>
+        <button class="btn-close-modal" type="button" aria-label="Fechar">&times;</button>
+      </div>
+
+      <div class="modal-content-area">
+        <div class="evaluation-readiness-card">
+          <div class="readiness-score-row">
+            <div class="score-badge-circle">6/6</div>
+            <div class="readiness-details">
+              <h4>Trilha Completa Concluída!</h4>
+              <p>Você completou todos os 6 passos do Tema 4: Renda Fixa e Renda Variável.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+          <p><strong>Resumo do seu Aprendizado:</strong></p>
+          <ul style="margin: 6px 0 10px 18px; font-size: 0.82rem; display: flex; flex-direction: column; gap: 3px;">
+            <li>✓ Domínio de Liquidez, CDI e Tesouro Selic</li>
+            <li>✓ Marcação a Mercado e teto protetivo do FGC (R$ 250k)</li>
+            <li>✓ Proteção de Ganho Real contra a Inflação (IPCA+)</li>
+            <li>✓ Cesta de Ações, Dividendos de FIIs e ETFs globais</li>
+            <li>✓ Toolkit de ferramentas reais de análise gratuito</li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 6px;">
+          <button type="button" onclick="alert('Iniciando o formulário oficial da Avaliação 2 - Tema 4! Boa sorte!')" class="btn-primary-cta" style="min-height: 52px;">
+            <span>🚀 Abrir Folha de Prova / Enviar Respostas</span>
+          </button>
+          <button type="button" onclick="closeModal('modal-evaluation-ready')" style="background: transparent; border: none; color: var(--text-light); padding: 8px; font-size: 0.8rem; font-weight: 700; cursor: pointer;">
+            Voltar e reler dicas
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL: TELEMETRIA DO PROFESSOR (AUDITORIA DE ENGAJAMENTO)
+       ========================================================================== -->
+  <div class="modal-overlay" id="modal-teacher-telemetry" role="dialog" aria-modal="true" aria-labelledby="teacher-modal-title">
+    <div class="modal-sheet">
+      <div class="modal-drag-pill"></div>
+      <div class="modal-header">
+        <h3 id="teacher-modal-title" class="modal-title">📊 Painel Docente: Telemetria</h3>
+        <button class="btn-close-modal" type="button" aria-label="Fechar">&times;</button>
+      </div>
+
+      <div class="modal-content-area">
+        <p style="font-size: 0.82rem; color: var(--text-muted);">
+          Métricas de retenção do aluno coletadas em tempo real (Scroll Depth, tempo de leitura por card e cliques no Toolkit):
+        </p>
+
+        <div id="teacher-telemetry-summary">
+          <!-- Preenchido via app.js -->
+        </div>
+
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <span style="font-size: 0.72rem; font-weight: 800; color: var(--text-muted); text-transform: uppercase;">Payload JSON Analítico:</span>
+            <button id="btn-copy-telemetry-json" type="button" style="background: var(--green-surface); color: var(--green-dark); border: 1px solid var(--green-border); padding: 2px 8px; border-radius: 6px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">
+              📋 Copiar JSON
+            </button>
+          </div>
+          <pre class="telemetry-code-box" id="teacher-telemetry-json"></pre>
+        </div>
+
+        <div style="font-size: 0.75rem; color: var(--text-light); text-align: center;">
+          Dados salvos localmente via LocalStorage e prontos para integração via Webhook / LMS.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SCRIPTS ASSÍNCRONOS / DEFER (CARREGAMENTO < 2 SEGUNDOS EM 3G/4G)
+       ========================================================================== -->
+  <script src="js/tracker.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
